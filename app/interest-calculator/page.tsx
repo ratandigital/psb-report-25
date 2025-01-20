@@ -3,8 +3,8 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 const LoanForm = () => {
-  const [disbursementAmount, setDisbursementAmount] = useState<number>();
-  const [paidPrincipal, setPaidPrincipal] = useState<number>();
+  const [disbursementAmount, setDisbursementAmount] = useState<number>(0);
+  const [paidPrincipal, setPaidPrincipal] = useState<number>(0);
   const [loanOverdueDate, setLoanOverdueDate] = useState<string>('');
   const [loanPaymentDate, setLoanPaymentDate] = useState<string>('');
   const [extraInterestAmount, setExtraInterestAmount] = useState<number | null>(null);
