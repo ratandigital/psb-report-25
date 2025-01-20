@@ -152,7 +152,7 @@ const LoanForm = () => {
         {extraInterestAmount !== null && (
           <div className="mt-4">
             <strong>Extra Interest Amount: </strong>
-            {extraInterestAmount.toFixed(2)}
+            {extraInterestAmount.toFixed(0)}
           </div>
         )}
       </div>
