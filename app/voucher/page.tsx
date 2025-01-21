@@ -20,9 +20,9 @@ const VoucherPage = () => {
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-indigo-500 to-purple-600">
       <div className="max-w-5xl mx-auto bg-white rounded-lg shadow-lg p-8">
         {/* Branch Seal */}
-        <div className="flex justify-center mb-6">
-          <div className="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center border-4 border-gray-400 shadow-md">
-            <span className="text-sm font-bold text-gray-600">Branch Seal</span>
+       <div className="flex justify-center mb-6">
+          <div className="w-24 h-24 rounded-full  flex items-center justify-center border-4 border-gray-400 shadow-md">
+            <span className="text-sm font-bold text-slate-300">Branch Seal</span>
           </div>
         </div>
 
