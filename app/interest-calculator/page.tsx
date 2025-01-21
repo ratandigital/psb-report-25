@@ -117,24 +117,31 @@ const LoanForm = () => {
         <div className="mb-4">
           <label htmlFor="disbursementAmount" className="block text-sm font-semibold">Disbursement Amount</label>
           <input
-            id="disbursementAmount"
-            type="number"
-            className="w-full p-2 border border-gray-300 rounded"
-            value={disbursementAmount}
-            onChange={(e) => setDisbursementAmount(Number(e.target.value))}
-          />
+  id="disbursementAmount"
+  type="number"
+  className="w-full p-2 border border-gray-300 rounded"
+  value={disbursementAmount || ''}
+  onChange={(e) => {
+    const value = e.target.value === '' ? 0 : Number(e.target.value);
+    setDisbursementAmount(value);
+  }}
+/>
+
         </div>
 
         {/* Paid Principal */}
         <div className="mb-4">
           <label htmlFor="paidPrincipal" className="block text-sm font-semibold">Paid Principal Amount (Before 01.01.2025)</label>
           <input
-            id="paidPrincipal"
-            type="number"
-            className="w-full p-2 border border-gray-300 rounded"
-            value={paidPrincipal}
-            onChange={(e) => setPaidPrincipal(Number(e.target.value))}
-          />
+  id="paidPrincipal"
+  type="number"
+  className="w-full p-2 border border-gray-300 rounded"
+  value={paidPrincipal || ''}
+  onChange={(e) => {
+    const value = e.target.value === '' ? 0 : Number(e.target.value);
+    setPaidPrincipal(value);
+  }}
+/>
         </div>
 
         {/* Outstanding Principal */}
