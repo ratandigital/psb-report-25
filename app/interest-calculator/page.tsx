@@ -124,6 +124,7 @@ const LoanForm = () => {
     value={loanType}
     onChange={(e) => setLoanType(e.target.value)}
   >
+    <option value="">Select a type</option>
     <option value="20103001">Interest on Microcredit</option>
     <option value="20103002">Interest on SME-Short Term</option>
     <option value="20103003">Interest on SME-2</option>
