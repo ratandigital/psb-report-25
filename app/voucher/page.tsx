@@ -61,7 +61,7 @@ const VoucherPage = () => {
               </tr>
               <tr className="border-b hover:bg-gray-50">
                 <td className="py-3 px-6 font-medium border-l border-r">Extra Interest Amount:</td>
-                <td className="py-3 px-6 border-l border-r text-green-600 font-bold">{extraInterestAmount}</td>
+                <td className="py-3 px-6 border-l border-r text-green-600 font-bold">{Number(extraInterestAmount).toFixed(0)}</td>
               </tr>
             </tbody>
           </table>
