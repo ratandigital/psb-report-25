@@ -34,6 +34,13 @@ const VoucherPage = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-indigo-500 to-purple-600">
       <div className="max-w-5xl mx-auto bg-white rounded-lg shadow-lg p-8">
+        {/* Branch Seal */}
+        <div className="flex justify-center mb-4">
+          <div className="w-20 h-20 rounded-full border-4 border-gray-400 flex items-center justify-center shadow-lg bg-gray-100">
+            <span className="text-center text-sm font-bold text-gray-600">Branch Seal</span>
+          </div>
+        </div>
+
         <h2 className="text-center text-3xl font-bold text-gray-800 mb-6">Extra Interest Charge Voucher</h2>
 
         <div className="overflow-x-auto">
@@ -117,8 +124,9 @@ const VoucherPage = () => {
             </tbody>
           </table>
         </div>
-{/* Signature Fields */}
- <div className="mt-8 flex justify-center space-x-4 print:space-x-12 flex-nowrap">
+
+        {/* Signature Fields */}
+        <div className="mt-8 flex justify-center space-x-4 print:space-x-12 flex-nowrap">
           <div className="text-center">
             <div className="border-b-2 mt-5 w-40 mx-auto"></div>
             <span className="font-semibold text-lg">FA:</span>
