@@ -117,7 +117,21 @@ const VoucherPage = () => {
             </tbody>
           </table>
         </div>
-
+{/* Signature Fields */}
+ <div className="mt-8 flex justify-center space-x-4 print:space-x-12 flex-nowrap">
+          <div className="text-center">
+            <div className="border-b-2 mt-5 w-40 mx-auto"></div>
+            <span className="font-semibold text-lg">FA:</span>
+          </div>
+          <div className="text-center">
+            <div className="border-b-2 mt-5 w-40 mx-auto"></div>
+            <span className="font-semibold text-lg">CO/CA:</span>
+          </div>
+          <div className="text-center">
+            <div className="border-b-2 mt-5 w-40 mx-auto"></div>
+            <span className="font-semibold text-lg">BM:</span>
+          </div>
+        </div>
         <div className="mt-8 flex justify-center">
           <button
             onClick={() => window.print()}
