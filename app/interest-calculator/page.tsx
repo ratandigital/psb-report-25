@@ -15,6 +15,7 @@ const LoanForm = () => {
   const [memberName, setMemberName] = useState<string>('');
   const [memberCode, setMemberCode] = useState<string>('');
   const [accountNo, setAccountNo] = useState<string>('');
+  const [loanType, setLoanType] = useState<string>('Interest on Microcredit'); // Default loan type
 
   const router = useRouter();
 
@@ -66,6 +67,7 @@ const LoanForm = () => {
       memberName: memberName,
       memberCode: memberCode,
       accountNo: accountNo,
+      loanType: loanType,
     }).toString();
 
     window.open(`/voucher?${queryParams}`, '_blank');
@@ -113,35 +115,49 @@ const LoanForm = () => {
           />
         </div>
 
+   {/* Loan Type */}
+<div className="mb-4">
+  <label htmlFor="loanType" className="block text-sm font-semibold">Loan Type</label>
+  <select
+    id="loanType"
+    className="w-full p-2 border border-gray-300 rounded"
+    value={loanType}
+    onChange={(e) => setLoanType(e.target.value)}
+  >
+    <option value="20103001">Interest on Microcredit</option>
+    <option value="20103002">Interest on SME-Short Term</option>
+    <option value="20103003">Interest on SME-2</option>
+    <option value="20103005">Interest on SME-3</option>
+    <option value="20103006">Interest on Cattle Rearing</option>
+    <option value="20103020">Interest Of Crop Warehouse Loan</option>
+    <option value="20103021">Interest On Palli Ambulance</option>
+    <option value="20103022">Interest on Safe Food Loan</option>
+  </select>
+</div>
+
+
         {/* Disbursement Amount */}
         <div className="mb-4">
           <label htmlFor="disbursementAmount" className="block text-sm font-semibold">Disbursement Amount</label>
           <input
-  id="disbursementAmount"
-  type="number"
-  className="w-full p-2 border border-gray-300 rounded"
-  value={disbursementAmount || ''}
-  onChange={(e) => {
-    const value = e.target.value === '' ? 0 : Number(e.target.value);
-    setDisbursementAmount(value);
-  }}
-/>
-
+            id="disbursementAmount"
+            type="number"
+            className="w-full p-2 border border-gray-300 rounded"
+            value={disbursementAmount || ''}
+            onChange={(e) => setDisbursementAmount(Number(e.target.value))}
+          />
         </div>
 
         {/* Paid Principal */}
         <div className="mb-4">
           <label htmlFor="paidPrincipal" className="block text-sm font-semibold">Paid Principal Amount (Before 01.01.2025)</label>
           <input
-  id="paidPrincipal"
-  type="number"
-  className="w-full p-2 border border-gray-300 rounded"
-  value={paidPrincipal || ''}
-  onChange={(e) => {
-    const value = e.target.value === '' ? 0 : Number(e.target.value);
-    setPaidPrincipal(value);
-  }}
-/>
+            id="paidPrincipal"
+            type="number"
+            className="w-full p-2 border border-gray-300 rounded"
+            value={paidPrincipal || ''}
+            onChange={(e) => setPaidPrincipal(Number(e.target.value))}
+          />
         </div>
 
         {/* Outstanding Principal */}
