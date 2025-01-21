@@ -56,7 +56,7 @@ const VoucherPage = () => {
                 <td className="py-3 px-6 border-l border-r">{diffDays}</td>
               </tr>
               <tr className="border-b hover:bg-gray-50">
-                <td className="py-3 px-6 font-medium border-l border-r">Interest Rate:</td>
+                <td className="py-3 px-6 font-medium border-l border-r">Extra Interest Rate:</td>
                 <td className="py-3 px-6 border-l border-r">2%</td>
               </tr>
               <tr className="border-b hover:bg-gray-50">
