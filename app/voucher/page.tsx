@@ -15,17 +15,25 @@ const VoucherPage = () => {
   const memberName = searchParams.get('memberName');
   const memberCode = searchParams.get('memberCode');
   const accountNo = searchParams.get('accountNo');
+  const loanType = searchParams.get('loanType');
+
+  // Map loan type codes to descriptions
+  const loanTypeDescriptions: { [key: string]: string } = {
+    '20103001': 'Interest on Microcredit',
+    '20103002': 'Interest on SME-Short Term',
+    '20103003': 'Interest on SME-2',
+    '20103005': 'Interest on SME-3',
+    '20103006': 'Interest on Cattle Rearing',
+    '20103020': 'Interest Of Crop Warehouse Loan',
+    '20103021': 'Interest On Palli Ambulance',
+    '20103022': 'Interest on Safe Food Loan',
+  };
+
+  const loanTypeDescription = loanTypeDescriptions[loanType || ''] || 'Unknown Loan Type';
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-indigo-500 to-purple-600">
       <div className="max-w-5xl mx-auto bg-white rounded-lg shadow-lg p-8">
-        {/* Branch Seal */}
-       <div className="flex justify-center mb-6">
-          <div className="w-24 h-24 rounded-full  flex items-center justify-center border-4 border-gray-400 shadow-md">
-            <span className="text-sm font-bold text-slate-300">Branch Seal</span>
-          </div>
-        </div>
-
         <h2 className="text-center text-3xl font-bold text-gray-800 mb-6">Extra Interest Charge Voucher</h2>
 
         <div className="overflow-x-auto">
@@ -51,6 +59,13 @@ const VoucherPage = () => {
               <tr className="border-b hover:bg-gray-50">
                 <td className="py-3 px-6 font-medium border-l border-r">Account No:</td>
                 <td className="py-3 px-6 border-l border-r">{accountNo}</td>
+              </tr>
+              {/* Loan Type */}
+              <tr className="border-b hover:bg-gray-50">
+                <td className="py-3 px-6 font-medium border-l border-r">Loan Type:</td>
+                <td className="py-3 px-6 border-l border-r">
+                  {loanType} - {loanTypeDescription}
+                </td>
               </tr>
               {/* Disbursement Amount */}
               <tr className="border-b hover:bg-gray-50">
@@ -103,23 +118,6 @@ const VoucherPage = () => {
           </table>
         </div>
 
-        {/* Signature Fields */}
-        <div className="mt-8 flex justify-center space-x-4 print:space-x-12 flex-nowrap">
-          <div className="text-center">
-            <div className="border-b-2 mt-5 w-40 mx-auto"></div>
-            <span className="font-semibold text-lg">FA:</span>
-          </div>
-          <div className="text-center">
-            <div className="border-b-2 mt-5 w-40 mx-auto"></div>
-            <span className="font-semibold text-lg">CO/CA:</span>
-          </div>
-          <div className="text-center">
-            <div className="border-b-2 mt-5 w-40 mx-auto"></div>
-            <span className="font-semibold text-lg">BM:</span>
-          </div>
-        </div>
-
-        {/* Print Button */}
         <div className="mt-8 flex justify-center">
           <button
             onClick={() => window.print()}
