@@ -92,7 +92,7 @@ const VoucherPage = () => {
               {/* Extra Interest Charge Date */}
               <tr className="border-b hover:bg-gray-50">
                 <td className="py-3 px-6 font-medium border-l border-r">Extra Interest Charge Date:</td>
-                <td className="py-3 px-6 border-l border-r">01.01.2025</td>
+                <td className="py-3 px-6 border-l border-r">2025-01-01</td>
               </tr>
               {/* Overdue Date */}
               <tr className="border-b hover:bg-gray-50">
