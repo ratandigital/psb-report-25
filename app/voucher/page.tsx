@@ -41,7 +41,7 @@ const VoucherPage = () => {
           </div>
         </div>
 
-        <h2 className="text-center text-3xl font-bold text-gray-800 mb-6">Extra Interest Charge Voucher</h2>
+        <h2 className="text-center text-3xl font-bold text-gray-800 mb-6">Additional Interest Charge Voucher</h2>
 
         <div className="overflow-x-auto">
           <table className="min-w-full table-auto border-collapse text-sm text-left text-gray-700">
